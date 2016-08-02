@@ -1,6 +1,7 @@
 # encoding=utf-8
 import re
 import datetime
+import traceback
 
 
 class InformationSpider(object):
@@ -31,6 +32,7 @@ class InformationSpider(object):
                     return {}
                 return myInformation
             except Exception:
+                print  traceback.format_exc()
                 failure += 1
         return {}  # 如果失败次数太大
 

@@ -32,9 +32,11 @@ class InitMessages(object):
 
     def readMyQQ(self, file_dir="./myQQ.txt"):
         """ 读取我的QQ信息（包括账号和密码） """
+        print file_dir
         qqlist = []
         f = open(file_dir, "r")
         for line in f.readlines():
+            print line
             uin = {}
             line = line.split(' ')
             uin['no'] = line[0]

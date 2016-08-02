@@ -71,10 +71,10 @@ class GetCookie(object):
         failure = 0
         while failure < 2:
             try:
-                chrome_driver = os.path.abspath("D:\MyDrivers\chromedriver.exe")
-                os.environ["webdriver.chrome.driver"] = chrome_driver
-                browser = webdriver.Chrome(chrome_driver)
-                # browser = webdriver.PhantomJS()
+                # chrome_driver = os.path.abspath("D:\MyDrivers\chromedriver.exe")
+                # os.environ["webdriver.chrome.driver"] = chrome_driver
+                # browser = webdriver.Chrome(chrome_driver)
+                browser = webdriver.PhantomJS()
                 wait = ui.WebDriverWait(browser, 10)
                 browser.get('http://qzone.qq.com/?s_url=http://user.qzone.qq.com/928385274/')
                 # print browser.title
